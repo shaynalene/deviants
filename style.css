@@ -7,6 +7,7 @@
 
 body{
 	background-image: linear-gradient(15deg, #101417 0%, #111617 150%);
+	
 }
 
 .header{
@@ -27,6 +28,7 @@ nav{
 nav img{
 	width:75px;
 	height: 75px;
+	margin-top:30px;
 }
 
 .glow-logo{
@@ -35,6 +37,7 @@ nav img{
 	font-family: 'Poppins', sans-serif;
 	font-size: 50px;
 	color: rgb(255, 255, 255);
+	float: right;
 	
 }
 
@@ -49,11 +52,30 @@ nav img{
 	position: relative;
 }
 
-.nav-links ul li a {
-	color: #fff;
+
+.nav-links ul li a{
+	display: block;
+	color: white;
 	text-decoration: none;
+	position: relative;
 	font-size: 24px;
-}
+  }
+  
+  .nav-links ul li a::after{
+	content: "";
+	background: white;
+	  mix-blend-mode: exclusion;
+	width: calc(100% + 20px);
+	height: 0;
+	position: absolute;
+	bottom: -4px;
+	left: -10px;
+	  transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+  
+  .nav-links ul li a:hover::after{
+	  height: calc(100% + 8px)
+  }
 
 .text-box{
 	width: 90%;
@@ -64,6 +86,8 @@ nav img{
 	transform: translate(-50%,-50%);
 	text-align: center;
 }
+
+
 
 .glow{
 	color: rgb(255, 255, 255);
@@ -77,7 +101,17 @@ nav img{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+width: 600px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(255, 0, 208); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .005em; /* Adjust as needed */
+  animation: 
+	typing 2.3s steps(15, end),
+	blink-caret .9s step-end infinite;
 }
+
 
 
 
@@ -142,7 +176,139 @@ img .double-down{
 	.nav-links ul {
 		padding: 20px;
 	}
+	.glow{
+		font-size: 10px;
+		
+		margin: 0;
+		
+		text-align: center;
+		justify-content: center;
+		padding-right: 150px;
+	}
+
+	
+
+	.type-gradient{
+		color: #fff;
+		font-family: monospace;
+		overflow: hidden; /* Ensures the content is not revealed until the animation */
+		border-right: .15em solid orange; /* The typwriter cursor */
+		white-space: nowrap; /* Keeps the content on a single line */
+		margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+		letter-spacing: .15em; /* Adjust as needed */
+		animation: 
+		  typing 3.5s steps(30, end),
+		  blink-caret .5s step-end infinite;
+	  }
+	@keyframes typing {
+		from { width: 0 }
+		to { width: 10px }
+	  }
+	  
+	  /* The typewriter cursor effect */
+	  @keyframes blink-caret {
+		from, to { border-color: transparent }
+		50% { border-color: rgb(255, 0, 208) }
+	  }
+
+
+  
 }
+
+
+
+.test{
+	text-shadow: .1em .1em 0 rgb(114, 114, 114);
+	color:rgb(255, 255, 255)
+	
+}
+
+
+
+.scribble{
+	background-image: url("images/deviant-snippet.gif");
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.scribble p{
+	font-family: 'Roboto Mono', monospace;
+	font-size: 50px;
+	padding: 120px 0px 30px 150px;
+	text-align: left;
+	border-right: .05em solid;
+	animation: caret 1s steps(1) infinite;
+
+}
+
+@media(max-width: 700px){
+	body{
+		overflow-x: hidden;
+	}
+	.scribble{
+		background-image: url("images/deviant-snippet-2.gif");
+		height: 40vh;
+		background-position: right;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.scribble p {
+	font-size: 25px;
+	padding: 40px 0px 30px 30px;
+	}
+	.icons-wrap{
+		padding: 20px 0 20px;
+		margin: 0 80px 0;
+	}
+	.latest-project{
+		height: 120vh;
+	}
+	.latest-project .latest-project-img img{
+		width: 340px;
+		height: 219px;
+		
+		margin:0 auto;
+	}
+	.latest-project .latest-project-title{
+		font-size: 34px;
+		text-align: center;
+		padding: 0;
+	}
+	.custom-btn{
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		align-self: center;
+		margin: 20px 190px 0;
+	}
+	.header-container p{
+		text-align: center;
+		padding: 0 30px;
+	}
+	.testimonials-section .header-test img {
+		width: 425px;
+		height: 213px;
+		padding: 0px;
+		margin:0;
+	}
+	.carousel-right {
+		align-items: center;
+		align-content: center;
+		align-self: center;
+		justify-content: center;
+		
+		float: none;
+		display: block;
+		
+	}
+
+
+
+}
+
+
 .second-section{
 	margin:0;
 	padding: 0;
@@ -155,7 +321,7 @@ img .double-down{
 	justify-content: center;
 	text-align: center;
 	
-	padding: 50px 30px 0;
+	padding: 60px 30px 0;
 	font-size: 50px;
 }
 
@@ -210,6 +376,7 @@ img .double-down{
   }
   
   @media(min-width: 540px){
+	
 	.card-grid{
 	  grid-template-columns: repeat(2, 1fr); 
 	}
@@ -220,11 +387,26 @@ img .double-down{
 	  grid-template-columns: repeat(4, 1fr); 
 	}
   }
+
+
+
+  .card-item {
+	  height: 90vh;
+	  align-items: center;
+	  justify-content: center;
+	  align-content: center;
+
+  }
   
   .card{
 	list-style: none;
 	position: relative;
+	height: 50vh;
+	margin-bottom: 30px;
+	text-align: center;
   }
+
+  
   
   .card:before{
 	content: '';
@@ -234,6 +416,7 @@ img .double-down{
   }
   
   .card__background{
+	  
 	background-color: linear-gradient(15deg, #101417 0%, #111617 150%) ;
 	background-size: cover;
 	background-position: center;
@@ -255,9 +438,6 @@ img .double-down{
 	transform: scale(1.05) translateZ(0);
   }
   
-  .card-grid:hover > .card:not(:hover) .card__background{
-	filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-  }
   
   .card__content{
 	left: 0;
@@ -298,12 +478,23 @@ img .double-down{
 	padding:0;
 }
 
+.icons-wrap{
+	justify-content: center;
+	align-content: center;
+	
+	align-items: center;
+	padding: 20px 60px 20px;
+	
 
+}
 
   .wrapper {
 	display: inline-flex;
 	list-style: none;
 	justify-content: center;
+	align-content: center;
+	
+	align-items: center;
   }
   
   .wrapper .icon {
@@ -366,12 +557,13 @@ img .double-down{
 
 .latest-project{
 	background-color: hsl(0, 0%, 73%);
-	height: 80vh;
+	min-height: 80vh;
 }
 
-.latest-project img{
+.latest-project-img{
 	padding: 80px;
-	padding-right: 100px;
+	padding-bottom: 30px;
+	float: left;
 }
 
 .latest-project h1{
@@ -517,17 +709,20 @@ img .double-down{
 		border-radius: 5px;
 		box-shadow: 0px 30px 40px -20px var(--grayishBlue);
 		padding: 30px;
-		margin: 20px;  
+		margin: 30px;  
 		background-color: rgb(58, 41, 121);
 	}
 	
 	.services-img {
 		float: right;
+		height:60px;
+		width:60px;
 	}
 	
 	@media (max-width: 450px) {
 		.box {
 			height: 200px;
+			 
 		}
 	}
 	
@@ -535,6 +730,7 @@ img .double-down{
 		.box {
 			text-align: center;
 			height: 180px;
+			
 		}
 	}
 	
@@ -587,35 +783,63 @@ img .double-down{
 		background-position: center;
 		background-size: cover;
 		background-image: url("images/testimonials-bg.png");
-		height:80vh;
+		min-height:85vh;
 		padding: 30px;
 		margin:0;
+		
+		
 	}
 
-	.testimonials-h2 {
-		color: rgb(252, 245, 245);
-		text-align: center;
-		text-transform: uppercase;
-		font-family: "Roboto", sans-serif;
-		font-weight: bold;
-		position: relative;
-		margin: 25px 0 50px;
+	.testi-flex-container {
+		display: inline-flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+	  }
+	  
+	  .testi-flex-items:nth-child(1) {
+		display: block;
+		flex-grow: 0;
+		flex-shrink: 1;
+		flex-basis: auto;
+		align-self: auto;
+		order: 0;
+	  }
+	  
+	  .testi-flex-items:nth-child(2) {
+		display: block;
+		flex-grow: 0;
+		flex-shrink: 1;
+		flex-basis: auto;
+		align-self: auto;
+		order: 0;
+	  }
+
+
+	.header-test img {
+		margin: 80px 80px 80px 0px;
+	
+		float: left;
+		width: 650px;
+		height: 325px;
 	}
-	.testimonials-h2::after {
-		content: "";
-		width: 100px;
-		position: absolute;
-		margin: 0 auto;
-		height: 3px;
-		background: #ffdc12;
-		left: 0;
-		right: 0;
-		bottom: -10px;
+
+	.header-test{
+		float:left;
+	}
+
+	.carousel-right{
+		margin-top: 0;
+	
+		
 	}
 	.carousel {
-		width: 650px;
-		margin: 0 auto;
-		padding-bottom: 50px;
+		max-width: 650px;
+		
+		padding-bottom: 55px;
+		
 	}
 	.carousel .carousel-item {
 		color: rgb(255, 255, 255);
@@ -623,24 +847,30 @@ img .double-down{
 		text-align: center;
 		overflow: hidden;
 		min-height: 340px;
+		margin-bottom: 0;
 	}
 	.carousel .carousel-item a {
 		color: #80a0c8;
 	}
-	.carousel .img-box {
-		width: 145px;
-		height: 145px;
+
+	.carousel .quote-mark {
+		width: 45px;
+		height: 45px;
 		margin: 0 auto;
-		border-radius: 50%;
+		padding: 0;
+		
+		
 	}
-	.carousel .img-box img {
+	.carousel .quote-mark img {
 		width: 100%;
 		height: 100%;
 		display: block;
-		border-radius: 50%;
+		
 	}
+
 	.carousel .testimonial {	
-		padding: 30px 0 10px;
+		padding: 20px 0 10px;
+		font-size: 24px;
 	}
 	.carousel .overview {	
 		text-align: center;
@@ -690,13 +920,10 @@ img .double-down{
 		border: none;
 	}
 	.carousel-indicators li.active {		
-		background: #888;		
+		background: #27308F;		
 	}
 	
-	.text-small {
-		font-size: 0.9rem;
-	  }
-	  
+
 	  .a-footer {
 		color: inherit;
 		text-decoration: none;
@@ -731,6 +958,10 @@ img .double-down{
 
 	  p .small{
 		  color:#000;
+	  }
+
+	  .small {
+		  color: #000;
 	  }
 
 	  @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
@@ -796,5 +1027,30 @@ img .double-down{
 		background: #111;
 	}
 	
-	
-	
+	.type-gradient{
+	color: #fff;
+	font-family: monospace;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+	animation: 
+	  typing 3.5s steps(30, end),
+	  blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 600px }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: rgb(255, 0, 208) }
+  }
+ 
+ 
+
