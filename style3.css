@@ -122,6 +122,33 @@ img .double-down{
 	padding: 10px;
 }
 
+@media (max-width: 1000px) {
+	.nav-links ul li{
+		display: block;
+	}
+	.nav-links{
+		position: absolute;
+		background: #22689d;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right:-200px;
+		text-align: left;
+		z-index: 2;
+		transition: 1s;
+	}
+	nav .fa-solid{
+		display: block;
+		color: #fff;
+		margin: 20px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	.nav-links ul {
+		padding: 20px;
+	}
+}
+
 
 @media(max-width: 700px){
 	.nav-container{
@@ -147,30 +174,6 @@ img .double-down{
 	.text-box p {
 		font-size: 20px;
 	}
-	.nav-links ul li{
-		display: block;
-	}
-	.nav-links{
-		position: absolute;
-		background: #22689d;
-		height: 100vh;
-		width: 200px;
-		top: 0;
-		right:-200px;
-		text-align: left;
-		z-index: 2;
-		transition: 1s;
-	}
-	nav .fa-solid{
-		display: block;
-		color: #fff;
-		margin: 20px;
-		font-size: 22px;
-		cursor: pointer;
-	}
-	.nav-links ul {
-		padding: 20px;
-	}
 	.text-box .glow{
 		
 		margin-top: 180px;
@@ -180,9 +183,7 @@ img .double-down{
 		justify-content: center;
 	
 	}
-	.astronaut{
-		display: none;
-	}
+	
 	.header{
 		min-height:220vh;
 		max-height: 400vh;
@@ -233,8 +234,27 @@ body > .faq {
 	background-image: url("images\astronaut.png");
 	background-size: 100% 100%;
 	float: left;
-	margin-left:200px;
+	padding-left:15vw;
 }
+
+@media(min-width: 1066px) and (max-width: 1400px){
+	.astronaut{
+		padding-left: 5vw;
+	}
+	}
+
+@media(min-width: 1000px) and (max-width: 1065px){
+.astronaut{
+	padding-left: 10px;
+}
+}
+
+@media(max-width: 999px){
+	.astronaut{
+		display: none;
+	}
+}
+
 
 .faq-container details {
 	border-left: 2px solid #000;
@@ -332,21 +352,32 @@ code {
 	padding-bottom: 60px;
 }
 
+@media(max-width:1218px){
+	.ours-flex-items:nth-child(3){
+		padding: 0px 50px;
+	}
+}
+
+@media(min-width:1300px){
+	.ours-flex-items:nth-child(3){
+		width: 800px;
+	}
+}
+
+
 
 .ours-flex-container {
 	display: inline-flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: normal;
+	justify-content: center;
 	align-items: center;
 	align-content: center;
 	
   }
   
   .ours-flex-items:nth-child(1) {
-	padding-left: 100px;
-	width: 561px;
-	height:378px;  
+	padding: 50px;
 	display: block;
 	flex-grow: 0;
 	flex-shrink: 1;
@@ -356,7 +387,8 @@ code {
   }
   
   .ours-flex-items:nth-child(2) {
-	margin-left: 200px;
+	
+	padding: 0px 50px;
 	width: 600px;
 	height:378px;  
 	display: block;
@@ -368,10 +400,9 @@ code {
   }
   
   .ours-flex-items:nth-child(3) {
-	margin-left: 100px;
-	margin-right: 80px;
-	padding-top: 20px;
-	width: 600px;
+	
+	padding:0px 50px;
+	max-width: 600px;
 	height:378px;  
 	display: block;
 	flex-grow: 0;
@@ -382,7 +413,7 @@ code {
   }
   
   .ours-flex-items:nth-child(4) {
-	padding-top: 50px;
+	padding: 50px;
 	display: block;
 	flex-grow: 0;
 	flex-shrink: 1;
@@ -390,6 +421,18 @@ code {
 	align-self: auto;
 	order: 3;
   }
+
+  @media(max-width: 1400px){
+	  
+	.our-story .part-one-details {
+    text-align: center;
+  }
+
+  .part-one-title{
+	text-align: center;
+	
+}
+}
 
   @media(max-width: 700px){
 	  .our-story{
@@ -411,7 +454,8 @@ code {
 		  margin-bottom: 30px;
 	  }
 	  .our-story .part-one img{
-		margin-left: 70px  ;
+		width: 320px;
+		height:209px;
 	  }
 	  .part-one img{
 		width: 320px;
@@ -421,7 +465,7 @@ code {
 		
 	  }
 	  .ours-flex-items:nth-child(2){
-		  width: 470px;
+		width: 470px;
 		margin: 0;
 		padding: 0;
 		justify-content: center;
@@ -458,18 +502,21 @@ code {
 	  
   }
 
-
+.part-one img{
+	width: 561px;
+    height: 378px;
+}
 .our-story{
 	background-color: hsl(0, 0%, 73%);
 	min-height: 165vh;
-	max-height: 200vh;
+	padding: 60px;
 	font-size: 20px;
 }
 
 .our-story-title{
 	text-align: center;
 	
-	padding: 60px 30px 0;
+	padding: 0px 30px 0;
 	font-size: 60px;
 }
 
@@ -493,6 +540,7 @@ code {
 }
 
 .meet-the-team{
+	padding:80px;
 	min-height: 135vh;
 	background-image:url("images/mtt-bg.png");
 	background-position: center;
@@ -509,7 +557,7 @@ code {
 
 .mtt-title{
 	color: #fff;
-	padding: 63px 30px 0;
+	padding: 0px 30px 0;
 	font-size: 60px;
 	text-align: center;
 
@@ -661,6 +709,7 @@ code {
   @media (max-width: 1600px) {
 	.cards {
 	  justify-content: center;
+	  
 	}
   }
 
