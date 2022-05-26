@@ -43,6 +43,7 @@ nav img{
 }
 
 .nav-links{
+	
 	flex:1;
 	text-align: right;
 }
@@ -144,6 +145,7 @@ nav .fa-solid{
 img .double-down{
 	padding: 10px;
 }
+
 
 @media (max-width: 1000px) {
 	.nav-links ul li{
@@ -291,6 +293,14 @@ img .double-down{
 
 }
 
+@media(min-width: 701px)and (max-width:1300px){
+	.testimonials-section .header-test img {
+		width: 525px;
+		height: 263px;
+		padding: 0px;
+		margin:0;
+	}
+}
 
 .second-section{
 	margin:0;
